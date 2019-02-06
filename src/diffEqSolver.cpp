@@ -1,9 +1,22 @@
-/*
- * diffEqSolver.cpp
- *
- *  Created on: Mar 13, 2015
- *      Author: cmyers
- */
+/* 
+* Copyright (C) 2019  Christopher A. Myers
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* 
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>
+*
+* If you have found this code usefull, please cite the research paper
+* associated with this package.
+*/
 
 #include "diffEqSolver.h"
 #include <cmath>
@@ -130,7 +143,7 @@ bool diffEqSolver::verletVel(double time, vector3D<double> &initPos, vector3D<do
           product = rDot_new*rDot_old;
           if(stepCount > 2)
           {
-            if(product <0)
+            if(product < 0)
             {
               if(rDot_new > rDot_old)
                 track =  true;
@@ -138,21 +151,17 @@ bool diffEqSolver::verletVel(double time, vector3D<double> &initPos, vector3D<do
               {
                 orbits++;
 
-                //purposely set to never happen
                 if(orbits > maxOrbits)
                   track = false;
               }
             }
           }
 
-
-          //this will never happen, logic is
-          //kep for reference only
+          // TO-DO update orbiting algorithm
           if(!track )
           {
             trajTries++;
             dt = time/((trajTries+1));
-            cout << "TRACKING\n";
           }
           else
           {

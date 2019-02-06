@@ -1,3 +1,23 @@
+/* 
+* Copyright (C) 2019  Christopher A. Myers
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* 
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>
+*
+* If you have found this code usefull, please cite the research paper
+* associated with this package.
+*/
+
 #include "molecule2.h"
 #include <string>
 #include <fstream>
@@ -687,20 +707,17 @@ void molecule2::importPDB()
             {
                     memcpy(atomType, tempRead + 76, 2);
 					atomType[2] = '\0';
-					cout << "Read:" << atomType << "|" << endl;
 					//molRead << tempRead << endl;
 					//molRead << atomType[0] << "|" << atomType[1];
                     //if the atom type entry is empty, use the atom name instead
                     if (atomType[0] == ' ' && atomType[1] == ' ')
                     {
-						cout << "Case 1: " << endl;
                             memcpy(atomType, tempRead + 12, 5);
                             atomType[5] = '\0';
 
                     }
                     else
                     {
-						cout << "Case 2: " << endl;
                             atomType[2] = '\0';
                             atomNameLength = 2;
 
@@ -880,7 +897,7 @@ void molecule2::setMolProperties(queue<double> xCoord, queue<double> yCoord, que
 
 						if (dispersionCutoff_ext && dispersion_radius_ext == 0)
 						{
-							dispersion_radius_ext = sigmaMax*pow(150.0 / minPct, 1.0 / 3.0)*1.3;
+							dispersion_radius_ext = sigmaMax*pow(150.0 / minPct, 1.0 / 3.0);
 							sprintf(buffer, " Dispersion cut-off radius not specified in input file: \n\tUsing a cut-off radius of %6.2f\n"
 								"\t Determined by largest VDW radius of %5.3f\n", dispersion_radius_ext, sigmaMax);
 							strcat(printOut, buffer);
@@ -888,7 +905,7 @@ void molecule2::setMolProperties(queue<double> xCoord, queue<double> yCoord, que
 						if (multipole_ext && multipole_radius_ext == 0)
 						{
 						        //multipole_radius_ext = sigmaMax*pow(150.0 / minPct, 1.0 / 3.0);
-							multipole_radius_ext = 35.0;
+							multipole_radius_ext = 20.0;
 							printf(buffer, " Multipole cut-off radius not specified in input file: \n\tUsing a cut-off radius of %6.2f\n"
 								"\t Determined by largest VDW radius of %5.3f\n", multipole_radius_ext, sigmaMax);
 							strcat(printOut, buffer);

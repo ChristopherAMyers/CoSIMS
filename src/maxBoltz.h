@@ -1,11 +1,26 @@
+/* 
+* Copyright (C) 2019  Christopher A. Myers
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* 
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>
+*
+* If you have found this code usefull, please cite the research paper
+* associated with this package.
+*/
+
 /*
- * maxBoltz.h
- *
- *  Created on: Jun 19, 2015
- *      Author: cmyers
- *
  *  This template class defines the Maxwell-Boltzmann Distribution
- *  Note that this is build using the BOltzmann constant in units
+ *  Note that this is build using the Boltzmann constant in units
  *  of (Angstrom^2)(atomic mass unit)/(pico-seconds^2)(Kelvin)
  */
 

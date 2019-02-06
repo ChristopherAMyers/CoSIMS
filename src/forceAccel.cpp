@@ -1,9 +1,22 @@
-/*
- * forceAccel.cpp
- *
- *  Created on: Aug 17, 2017
- *      Author: cmyers
- */
+/* 
+* Copyright (C) 2019  Christopher A. Myers
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* 
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>
+*
+* If you have found this code usefull, please cite the research paper
+* associated with this package.
+*/
 
 #include "forceAccel.h"
 
@@ -93,7 +106,7 @@ namespace std
 			  strcat(printOut, buffer);
 		  }
 
-		  sprintf(buffer, "\t Number of clusters formed:    %6i\n", clusterGroups.size());
+		  sprintf(buffer, "\t Number of clusters formed:    %6i\n", (int)clusterGroups.size());
 		  strcat(printOut, buffer);
 		  sprintf(buffer, "\t Average cluster size:         %6.2f atoms\n", avgClusterSize);
 		  strcat(printOut, buffer);
@@ -495,17 +508,16 @@ namespace std
               chargeR_5 = totalCharge[n]*r_5;
               chargeR_3 = chargeR_5*r2;
 
-			  cout << "monopole term\n";
               if(multipole_order_ext >= 1 && !centerReplace[n])
               {
-				  cout << "dipole term\n";
+
                 r_7 = r_5*r_2;
                 const1 = 3*(dipole[n][0]*dx[0] + dipole[n][1]*dx[1] + dipole[n][2]*dx[2]);
               }
 
               if (multipole_order_ext >= 2)
               {
-				  cout << "quadpole term\n";
+
                 r_7 = r_5*r_2;
                 r_9 = r_5*r_2*r_2;
                 const2 = 0;
@@ -514,7 +526,6 @@ namespace std
                 tMat2[2] = (quadPole[n][0][2]*dx[0] + quadPole[n][1][2]*dx[1] + quadPole[n][2][2]*dx[2])*r_7;
                 const2 = 5*(tMat2[0]*dx[0] + tMat2[1]*dx[1] + tMat2[2]*dx[2])*r_2*0.5;
               }
-			  cin.get();
               fieldX += chargeR_3*dx[0];
               fieldY += chargeR_3*dx[1];
               fieldZ += chargeR_3*dx[2];

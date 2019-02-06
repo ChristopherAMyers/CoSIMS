@@ -1,7 +1,0 @@
-
- Starting Program 
- Current Date/Time: Wed Jun 13 20:25:14 2018
-
- Importing and assigning moelcule information...
- Importing files complete.
-ERROR: No molecule file was given. Check command-line aguments

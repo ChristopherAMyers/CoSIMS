@@ -1,3 +1,23 @@
+/* 
+* Copyright (C) 2019  Christopher A. Myers
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* 
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>
+*
+* If you have found this code usefull, please cite the research paper
+* associated with this package.
+*/
+
 #include "fileParams.h"
 
 
@@ -209,7 +229,7 @@ void fileParams::setDefaultParams(string molFileName)
           subDir_ext = ""; //output directory
           dt_ext = 0.01; //trajectory integration time step in pico-sed
           temp_ext = 298; //temperature of system in Kelvin
-          trajNum_ext = 500000; //number of trajectories per integration
+          trajNum_ext = 50000; //number of trajectories per integration
           iterations_ext = 10; //number of CCS integrals to average over
 		  if(!changed.threads)
 			numThreads_ext = 1; //number of OpenMP threads to run on
@@ -223,9 +243,9 @@ void fileParams::setDefaultParams(string molFileName)
           printTrajOnFail_ext = false;
           printData_ext = false;
           printDataOnFail_ext = false;
-          dispersionCutoff_ext = false;
+          dispersionCutoff_ext = true;
           dispersion_radius_ext = 0; //this will be applied in molecule.cpp
-          multipole_ext = false;
+          multipole_ext = true;
           multipole_radius_ext = 0; //this will be applied in molecule2.cpp
           multipole_order_ext = 1;
           printRate_ext = 20000;
