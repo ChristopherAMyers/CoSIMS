@@ -1,4 +1,6 @@
 # CoSIMS_0.9.0
-This is the first release of CoSIMS, a Collision Simulator for Ion Mobility Spectrometry. As of this realse, the code is still considered a beta until more feedback and testing has been provided. 
+This is the first release of CoSIMS, a Collision Simulator for Ion Mobility Spectrometry. Although this is considered v1. 0, however, the public has had little chance to test using the code. We welcome the submission of bugs, improvements, and suggestions to the code.
 
-* We are still in the provcess of uploading examples and instalation instructions. Please check back soon for further progress!
+If you find this code usefull, please cite the following paper:
+
+>Christopher A. Myers, Rebecca J. D’Esposito, Daniele Fabris, Srivathsan V. Ranganathan, and Alan A. Chen. CoSIMS: An Optimized Trajectory Based Collision Simulator for Ion Mobility Spectrometry. *J. Phys. Chem. B.* In review
