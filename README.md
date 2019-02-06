@@ -1,4 +1,4 @@
-# CoSIMS_0.9.0
+# CoSIMS
 This is the first release of CoSIMS, a Collision Simulator for Ion Mobility Spectrometry. Although this is considered v1. 0, however, the public has had little chance to test using the code. We welcome the submission of bugs, improvements, and suggestions to the code.
 
 If you find this code usefull, please cite the following paper:
