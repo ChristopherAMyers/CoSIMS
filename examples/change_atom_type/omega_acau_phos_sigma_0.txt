@@ -1,0 +1,217 @@
+
+ Starting Program 
+ Current Date/Time: Wed Feb  6 13:57:55 2019
+
+ Importing and assigning molecule information...
+ Reading input file: /network/rit/lab/ChenRNALab/awesomeSauce/programming/git/CoSIMS/CoSIMS/examples/change_atom_type/input_neut.in
+ Importing files complete.
+
+Atom parameters are located at: 
+/network/rit/lab/ChenRNALab/awesomeSauce/programming/git/CoSIMS/CoSIMS/examples/change_atom_type/atoms.dat
+ Dispersion cut-off radius not specified in input file: 
+	Using a cut-off radius of  23.43
+	 Determined by largest VDW radius of 3.500
+ Dispersion cut-off radius not specified in input file: 
+	Using a cut-off radius of  23.43
+	 Determined by largest VDW radius of 3.500
+
+ OmegaCal will use the following settings:
+	 Project name:                                              acau_phos_sigma_0
+	 Number of CCS integrals:                                                  10
+	 Number of trajectories per CCS integral:                               50000
+	 Trajectory time step (pico sec):                                     0.01000
+	 Temperature of the molecule system (Kelvin):                          298.00
+	 Random number seed for 64-bit Mersenne-Twister:                    709964726
+	 Total charge of molecule (e):                                              0
+	 No-charges present: molecule: only dispersion cutoff interactions will be used.
+
+ Program input and output:
+	 Program will print all outputs to:
+	 /network/rit/lab/ChenRNALab/awesomeSauce/programming/git/CoSIMS/CoSIMS/examples/change_atom_type/omega_acau_phos_sigma_0.txt
+	 Molecule will be imported from:
+	 /network/rit/lab/ChenRNALab/awesomeSauce/programming/git/CoSIMS/CoSIMS/examples/change_atom_type/acau_phos_sigma.pdb
+
+ Atom type breakdown:
+	 Name        Symbol    Mass    Sigma    Epsilon  IntMass  Count
+	 hydrogen       H      1.01    2.0430   0.01499      1       89
+	 carbon         C     12.01    2.0430   0.03090     12       76
+	 nitrogen       N     14.01    2.3430   0.03090     14       29
+	 oxygen         O     16.00    2.0430   0.03090     16       52
+	 phosphorus     P     30.97    2.0430   0.03113     31        5
+	 phostest      PT     35.97    2.4300   0.03000    310        1
+	 Total number of atoms:   252
+	 Total mass of molecule:  2431.4 a.u.
+	 Reduced mass:            3.996 a.u.
+
+
+	 Total Mass of molecule (a.u.):      2431
+	 Radius of Gyration (ang):         7.8722
+
+	 Center of Mass (a.u. Ang):
+	 {     3.0523      3.4692      4.2083   }
+
+	 Inertia Tensor (a.u. Ang^2):
+	 {  9.417e+04   2.477e+04       -7454   }
+	 {  2.477e+04   1.011e+05        6646   }
+	 {      -7454        6646   1.017e+05   }
+
+	 Rotation matrix applied to molecule: 
+	 {     0.6555      0.7552      0.0063   }
+	 {    -0.7200      0.6274     -0.2967   }
+	 {    -0.2280      0.1899      0.9550   }
+
+ Creating potential energy surface...
+
+ Impact parameter properties:
+                      X         Y         Z
+ -----------------------------------------------
+ Axis Length    :    16.668    17.811    19.533
+ Uncertainty    :   0.17437   0.19044   0.22098
+ Percent Uncert :    1.0461    1.0692    1.1313
+ -----------------------------------------------
+	 RMSD:    0.11901
+ 	 Covariance matrix:
+	 {     0.0304   -0.008387    -0.01143   }
+	 {  -0.008387     0.03627     -0.0102   }
+	 {   -0.01143     -0.0102     0.04883   }
+ Average ellipsoid axes:    18.004 +/-  0.078501 Ang.
+ Ellipsoid surface area:    4069.9 +/-    35.355 Ang^2.
+ Ellipsoid axes further expanded by   2.41 Ang.
+
+ Cluster formation summary:
+	 Number of centers replaced
+	 by center of charge:               0
+	 Number of clusters formed:        18
+	 Average cluster size:          14.00 atoms
+	 Average cluster radius:         3.24 Ang.
+	 Multipole cut-off radius:       20.0 Ang.
+	 Dispersion cut-off radius:      23.4 Ang.
+
+ Velocity distribution statistics: 
+	 Maximum velocity:  40.273 ang/ps
+	 Minimum velocity:   7.620 ang/ps
+	 Mean velocity:     18.504 ang/ps
+	 Mode velocity:     17.607 ang/ps
+	 Percent of velocity 
+	 distribution used: 98.980%
+
+
+ Starting Trajectory Calculations:
+ _________________________________
+
+
+ Computing CCS integral 1 / 10 using 1 OpenMP thread(s)
+ progress: Traj 10000 of 50000 (20.0 %); CCS =    378.02 +-    8.2173 (2.17 %)
+ progress: Traj 20000 of 50000 (40.0 %); CCS =    373.02 +-    5.7557 (1.54 %)
+ progress: Traj 30000 of 50000 (60.0 %); CCS =    374.11 +-    4.7037 (1.26 %)
+ progress: Traj 40000 of 50000 (80.0 %); CCS =    373.31 +-    4.0762 (1.09 %)
+ progress: Traj 50000 of 50000 (100.0 %); CCS =    374.89 +-    3.6481 (0.97 %)
+ Number of completed trajectories: 50000
+ Omega:      374.89 +/- 3.65 (0.97 %)
+ Total time: 13.885; estimated time remaining: 124.963
+
+ Computing CCS integral 2 / 10 using 1 OpenMP thread(s)
+ progress: Traj 10000 of 50000 (20.0 %); CCS =    382.50 +-    8.1991 (2.14 %)
+ progress: Traj 20000 of 50000 (40.0 %); CCS =    379.50 +-    5.7934 (1.53 %)
+ progress: Traj 30000 of 50000 (60.0 %); CCS =    376.27 +-    4.7237 (1.26 %)
+ progress: Traj 40000 of 50000 (80.0 %); CCS =    375.63 +-    4.0928 (1.09 %)
+ progress: Traj 50000 of 50000 (100.0 %); CCS =    376.32 +-    3.6641 (0.97 %)
+ Number of completed trajectories: 50000
+ Omega:      376.31 +/- 3.66 (0.97 %)
+ Total time: 27.895; estimated time remaining: 111.582
+
+ Computing CCS integral 3 / 10 using 1 OpenMP thread(s)
+ progress: Traj 10000 of 50000 (20.0 %); CCS =    358.00 +-    8.0616 (2.25 %)
+ progress: Traj 20000 of 50000 (40.0 %); CCS =    368.33 +-    5.7588 (1.56 %)
+ progress: Traj 30000 of 50000 (60.0 %); CCS =    370.38 +-    4.7082 (1.27 %)
+ progress: Traj 40000 of 50000 (80.0 %); CCS =    370.69 +-     4.077 (1.10 %)
+ progress: Traj 50000 of 50000 (100.0 %); CCS =    372.17 +-    3.6526 (0.98 %)
+ Number of completed trajectories: 50000
+ Omega:      372.16 +/- 3.65 (0.98 %)
+ Total time: 41.744; estimated time remaining: 97.402
+
+ Computing CCS integral 4 / 10 using 1 OpenMP thread(s)
+ progress: Traj 10000 of 50000 (20.0 %); CCS =    358.64 +-    8.0677 (2.25 %)
+ progress: Traj 20000 of 50000 (40.0 %); CCS =    364.27 +-    5.7183 (1.57 %)
+ progress: Traj 30000 of 50000 (60.0 %); CCS =    367.32 +-     4.686 (1.28 %)
+ progress: Traj 40000 of 50000 (80.0 %); CCS =    369.66 +-    4.0652 (1.10 %)
+ progress: Traj 50000 of 50000 (100.0 %); CCS =    369.91 +-    3.6355 (0.98 %)
+ Number of completed trajectories: 50000
+ Omega:      369.90 +/- 3.64 (0.98 %)
+ Total time: 55.579; estimated time remaining: 83.369
+
+ Computing CCS integral 5 / 10 using 1 OpenMP thread(s)
+ progress: Traj 10000 of 50000 (20.0 %); CCS =    378.15 +-    8.2155 (2.17 %)
+ progress: Traj 20000 of 50000 (40.0 %); CCS =    375.65 +-    5.7833 (1.54 %)
+ progress: Traj 30000 of 50000 (60.0 %); CCS =    376.15 +-    4.7262 (1.26 %)
+ progress: Traj 40000 of 50000 (80.0 %); CCS =    372.44 +-    4.0786 (1.10 %)
+ progress: Traj 50000 of 50000 (100.0 %); CCS =    374.54 +-    3.6579 (0.98 %)
+ Number of completed trajectories: 50000
+ Omega:      374.54 +/- 3.66 (0.98 %)
+ Total time: 69.439; estimated time remaining: 69.439
+
+ Computing CCS integral 6 / 10 using 1 OpenMP thread(s)
+ progress: Traj 10000 of 50000 (20.0 %); CCS =    361.81 +-    8.0903 (2.24 %)
+ progress: Traj 20000 of 50000 (40.0 %); CCS =    368.49 +-    5.7427 (1.56 %)
+ progress: Traj 30000 of 50000 (60.0 %); CCS =    368.89 +-    4.6991 (1.27 %)
+ progress: Traj 40000 of 50000 (80.0 %); CCS =    368.73 +-    4.0674 (1.10 %)
+ progress: Traj 50000 of 50000 (100.0 %); CCS =    370.05 +-    3.6431 (0.98 %)
+ Number of completed trajectories: 50000
+ Omega:      370.04 +/- 3.64 (0.98 %)
+ Total time: 83.197; estimated time remaining: 55.465
+
+ Computing CCS integral 7 / 10 using 1 OpenMP thread(s)
+ progress: Traj 10000 of 50000 (20.0 %); CCS =    379.92 +-    8.2411 (2.17 %)
+ progress: Traj 20000 of 50000 (40.0 %); CCS =    374.65 +-    5.7763 (1.54 %)
+ progress: Traj 30000 of 50000 (60.0 %); CCS =    374.81 +-    4.7127 (1.26 %)
+ progress: Traj 40000 of 50000 (80.0 %); CCS =    373.42 +-    4.0771 (1.09 %)
+ progress: Traj 50000 of 50000 (100.0 %); CCS =    371.81 +-    3.6402 (0.98 %)
+ Number of completed trajectories: 50000
+ Omega:      371.81 +/- 3.64 (0.98 %)
+ Total time: 96.927; estimated time remaining: 41.540
+
+ Computing CCS integral 8 / 10 using 1 OpenMP thread(s)
+ progress: Traj 10000 of 50000 (20.0 %); CCS =    365.71 +-     8.099 (2.21 %)
+ progress: Traj 20000 of 50000 (40.0 %); CCS =    369.06 +-    5.7429 (1.56 %)
+ progress: Traj 30000 of 50000 (60.0 %); CCS =    375.19 +-     4.728 (1.26 %)
+ progress: Traj 40000 of 50000 (80.0 %); CCS =    376.02 +-    4.0931 (1.09 %)
+ progress: Traj 50000 of 50000 (100.0 %); CCS =    375.95 +-     3.659 (0.97 %)
+ Number of completed trajectories: 50000
+ Omega:      375.93 +/- 3.66 (0.97 %)
+ Total time: 110.842; estimated time remaining: 27.711
+
+ Computing CCS integral 9 / 10 using 1 OpenMP thread(s)
+ progress: Traj 10000 of 50000 (20.0 %); CCS =    386.34 +-      8.26 (2.14 %)
+ progress: Traj 20000 of 50000 (40.0 %); CCS =    383.51 +-    5.8416 (1.52 %)
+ progress: Traj 30000 of 50000 (60.0 %); CCS =    379.26 +-    4.7422 (1.25 %)
+ progress: Traj 40000 of 50000 (80.0 %); CCS =    377.60 +-    4.1009 (1.09 %)
+ progress: Traj 50000 of 50000 (100.0 %); CCS =    379.35 +-    3.6796 (0.97 %)
+ Number of completed trajectories: 50000
+ Omega:      379.34 +/- 3.68 (0.97 %)
+ Total time: 124.658; estimated time remaining: 13.851
+
+ Computing CCS integral 10 / 10 using 1 OpenMP thread(s)
+ progress: Traj 10000 of 50000 (20.0 %); CCS =    371.32 +-    8.1858 (2.20 %)
+ progress: Traj 20000 of 50000 (40.0 %); CCS =    373.61 +-    5.7774 (1.55 %)
+ progress: Traj 30000 of 50000 (60.0 %); CCS =    373.41 +-    4.7125 (1.26 %)
+ progress: Traj 40000 of 50000 (80.0 %); CCS =    370.54 +-    4.0637 (1.10 %)
+ progress: Traj 50000 of 50000 (100.0 %); CCS =    372.43 +-    3.6427 (0.98 %)
+ Number of completed trajectories: 50000
+ Omega:      372.43 +/- 3.64 (0.98 %)
+ Total time: 138.879; estimated time remaining: 0.000
+
+
+ ___________________________________
+   Mean Cross-section:     373.734
+   Standard Dev:             2.847
+   StdDev Percent:           0.762
+
+   Weighted CCS Mean:      373.716
+   Weighted Error:           1.155
+   Weighted Pct. Error:     0.3090
+   Max Energy Deviation:    0.4999
+ ___________________________________
+ Ending Program 
+ Current Time: Wed Feb  6 14:00:15 2019
+
+ Total Time: 139.117

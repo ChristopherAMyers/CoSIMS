@@ -1,0 +1,4 @@
+This is an example of applying an input file to change
+the name of the output. Please see the manual for other
+parameters, such as the number of trajectories, that 
+can be change dusing an input file.

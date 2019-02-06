@@ -1,0 +1,7 @@
+#name       symbol  mass        sigma   epsilon     intMass
+Carbon      C       12.010      2.043   0.03090114  12
+Hydrogen    H       1.00794     2.043   0.01498936  1
+Oxygen      O       15.9994     2.043   0.03090114  16
+Phosphorus  P       30.9738     2.043   0.03113175  31
+Nitrogen    N       14.0060     2.343   0.03090114  14
+PhosTest    PT      35.9700     2.430   0.0300000   310

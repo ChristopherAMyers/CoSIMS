@@ -457,6 +457,7 @@ void molecule2::importMFJ(bool changedName, bool changedCharge)
   char printOut[1000] = "";
 
   bool uniformCharge = false;
+  bool calcCharge = false;
   string unit, chargeType, tempVal;
   string tempX, tempY, tempZ, tempMass, tempCharge;
   double scale, unitConv;
@@ -567,7 +568,10 @@ void molecule2::importMFJ(bool changedName, bool changedCharge)
         uniformCharge = true;
       }
       else if(chargeType.compare("calc") == 0)
-        charge_ext = true;
+      {
+          calcCharge = true;
+          charge_ext = true;
+      }
       else
       {
         sprintf(buffer, " Warning: Charge type incorrectly specified; Assuming no charge.\n");
@@ -605,19 +609,31 @@ void molecule2::importMFJ(bool changedName, bool changedCharge)
     unitConv = 0.529177210;
 
   //loop through each line and grap coordinate data
+  double totalCharge = 0.0;
+  double thisChg;
   while(file >> tempX >> tempY >> tempZ >> tempMass >> tempCharge)
     {
       //cout << tempX << "  " << tempY << "  " << tempZ << "  " << tempMass << "  " << tempCharge << endl;
       xCoord.push(atof(tempX.c_str())*scale*unitConv);
       yCoord.push(atof(tempY.c_str())*scale*unitConv);
       zCoord.push(atof(tempZ.c_str())*scale*unitConv);
+      
 	  fileLine.push("Line number " + to_string(xCoord.size()) + "\n");
 
       if(charge_ext)
-        if(uniformCharge)
-          pCharge.push(totalCharge_ext/(double)numAtoms);
-        else
-          pCharge.push(atof(tempCharge.c_str()));
+      {
+          if(uniformCharge)
+          {
+              thisChg = totalCharge_ext/(double)numAtoms;
+              pCharge.push(thisChg);
+          }
+          else
+          {
+              thisChg = atof(tempCharge.c_str());
+              pCharge.push(thisChg);
+          }
+          totalCharge += thisChg;
+      }
       else
         pCharge.push(0.0);
 
@@ -637,6 +653,8 @@ void molecule2::importMFJ(bool changedName, bool changedCharge)
 
 
   file.close();
+  if(calcCharge)
+    totalCharge_ext = totalCharge;
   setMolProperties(xCoord, yCoord, zCoord, pCharge, type, fileLine);
 }
 
