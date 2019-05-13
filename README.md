@@ -3,4 +3,5 @@ This is the first release of CoSIMS, a Collision Simulator for Ion Mobility Spec
 
 If you find this code usefull, please cite the following paper:
 
->Christopher A. Myers, Rebecca J. D’Esposito, Daniele Fabris, Srivathsan V. Ranganathan, and Alan A. Chen. CoSIMS: An Optimized Trajectory Based Collision Simulator for Ion Mobility Spectrometry. *J. Phys. Chem. B.* In review
+>Christopher A. Myers, Rebecca J. D’Esposito, Daniele Fabris, Srivathsan V. Ranganathan, and Alan A. Chen. CoSIMS: An Optimized Trajectory Based Collision Simulator for Ion Mobility Spectrometry. *J. Phys. Chem. B.*, May 2019, 10.1021/acs.jpcb.9b01018.
+https://pubs.acs.org/doi/10.1021/acs.jpcb.9b01018
