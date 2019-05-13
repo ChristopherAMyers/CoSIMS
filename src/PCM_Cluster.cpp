@@ -184,7 +184,6 @@ void PCM_Cluster::setProperties()
 
 	for (int i = 0; i < numClusters; i++)
 	{
-		//maxDist[i].setEqual(0.0, 0.0, 0.0);
 		minDist[i].setEqual(DBL_MAX, DBL_MAX, DBL_MAX);
 		for (int j = 0; j < (signed)clusterGroups[i].size(); j++)
 		{
@@ -196,16 +195,11 @@ void PCM_Cluster::setProperties()
 				minDist[i] = diffVec;
 			}
 
-			//else if (maxDist[i].X == 0)
-				//maxDist[i] = diffVec;
-
 			else if (diffMag > maxDist[i].mag())
 			{
 				maxDist[i] = centerVec[i] - coords[clusterGroups[i].at(j)];
 			}
 
-			//else if (diffMag < minDist[i].mag())
-				//minDist[i] = centerVec[i] - coords[clusterGroups[i].at(j)];
 		}
 	}
 }
@@ -237,21 +231,21 @@ void PCM_Cluster::orderClusters()
   double minValue = 0;
   for(int n = 0; n < (size - 1); n ++)
   {
-    minIndex = n;
-    minValue = centerVec[n].Z;
-    for(int i = n + 1; i < size; i ++)
-    {
-      if(centerVec[i].Z < minValue)
-      {
-        minValue = centerVec[i].Z;
-        minIndex = i;
-      }
-    }
+		minIndex = n;
+		minValue = centerVec[n].Z;
+		for(int i = n + 1; i < size; i ++)
+		{
+			if(centerVec[i].Z < minValue)
+			{
+				minValue = centerVec[i].Z;
+				minIndex = i;
+			}
+		}
 
-    swap(maxDist[n], maxDist[minIndex]);
-    swap(centerVec[n], centerVec[minIndex]);
-    swap(clusterGroups[n], clusterGroups[minIndex]);
-  }
+		swap(maxDist[n], maxDist[minIndex]);
+		swap(centerVec[n], centerVec[minIndex]);
+		swap(clusterGroups[n], clusterGroups[minIndex]);
+	}
 }
 
 int PCM_Cluster::getNumClusters()

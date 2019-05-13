@@ -37,18 +37,18 @@ class molecule2
 {
 	ifstream file;
 	int numH, numC, numO, numN, numP;// Added 06/28/15
-        struct forceField
-        {
-          double mass;
-          double epsilon;
-          double sigma;
-          string name;
-          string symbol;
-          int atomCount;
-          int intMass;
-        };
+	struct forceField
+	{
+		double mass;
+		double epsilon;
+		double sigma;
+		string name;
+		string symbol;
+		int atomCount;
+		int intMass;
+	};
 
-        initParams params;
+  initParams params;
 	vector <forceField> fieldData; //stores forceField data from file
 
 	//stores multipole and inertia options
@@ -93,25 +93,25 @@ public:
 	double centerX, centerY, centerZ;
 	double maxX, maxY, maxZ;
 	void makeXYZ(double, double, double, double);
-	void importTXT(); //Added 06/28/15
-        void importPDB(); //Added 06/28/15
-        void importPQR();
-        void importMFJ(bool, bool);
-        void setMolProperties(queue<double>, queue<double>, queue<double>, queue<double>, queue<string>, queue<string>);
-        void printMolStats(); // Added 06/28/15
+	void importTXT();
+	void importPDB();
+	void importPQR();
+	void importMFJ(bool, bool);
+	void setMolProperties(queue<double>, queue<double>, queue<double>, queue<double>, queue<string>, queue<string>);
+	void printMolStats(); 
 
-        //multipole annd inertia functions
-            bool charge;
-        void setMultipole();
-        void setDipole();
-        void setQuadpole();
-        void setOctupole();
-        void setInertia(bool);
-        void setInertia(double[3][3]);
-        void getEigenvalues(double[3][3], double(&)[3]);
-        void getEigenvectors(double[3][3], double[3], double(&)[3][3]);
-        void rotateLongVec();
-        double delta(int, int);
+	//multipole annd inertia functions
+	bool charge;
+	void setMultipole();
+	void setDipole();
+	void setQuadpole();
+	void setOctupole();
+	void setInertia(bool);
+	void setInertia(double[3][3]);
+	void getEigenvalues(double[3][3], double(&)[3]);
+	void getEigenvectors(double[3][3], double[3], double(&)[3][3]);
+	void rotateLongVec();
+	double delta(int, int);
 
 
 };

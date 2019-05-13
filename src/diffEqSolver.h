@@ -70,7 +70,8 @@ public:
 
 	//verlet-velocity integrator
 	//returns true if orbiting has not occurred
-	bool verletVel(double, vector3D<double>&, vector3D<double>&, double, double, double, double&, localThreadParams&); //runge-kutta 4th order diffEq SOlver
+	bool verletVel(double, vector3D<double>&, vector3D<double>&, 
+					double, double, double, double&, localThreadParams&);
 
 	//Determines if orbiting has occurred by tracking the
 	//projeciton of the position vector to the velocity vector

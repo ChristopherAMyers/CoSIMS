@@ -76,7 +76,7 @@ namespace std
     ~forceAccel();
 
     void setMol(molecule2&);
-	void setClusters();
+		void setClusters();
     vector3D<double> getReducedVec(vector3D<double>&);
     vector3D<double> getVec(vector3D<double>&);
     double getSecDerivMag(vector3D<double>&);
