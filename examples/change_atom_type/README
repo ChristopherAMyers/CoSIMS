@@ -1,6 +1,13 @@
 This is an exmaple of hwo to change the force field
-parameters and hwo to add additional atom types using
-the optional atom-type file. Just call the program using
+parameters and how to add additional atom types using
+the optional atom-type file. Here, we change the parameters
+of the Phosphate atom by either changing the symbol to
+"PT" in the .pdb file, or by using the integer mass of
+"310" in the .mfj file. Note that the integer mass does
+not actually change the mass of the particle, it is simply
+used as an integer to idenfity various particles with.
+
+Just call the program using
 the -a option on the atoms.dat file. Both .pdb and .mfj
 can be used with alternate atom types. Please see the
 manual for further details.
